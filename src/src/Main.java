@@ -1,15 +1,21 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int[] arr = {5, 3, 8, 4, 2};
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // MergeSort
+        MergeSort.sort(arr.clone());
+
+        // QuickSort
+        QuickSort.sort(arr.clone());
+
+        // Select (k-th element)
+        int val = DeterministicSelect.select(arr.clone(), 2);
+
+        // ClosestPair
+        double[][] points = {{0,0}, {1,1}, {2,2}, {5,5}};
+        double d = ClosestPair.closestPair(points);
+
+        System.out.println("Select result = " + val);
+        System.out.println("Closest Pair distance = " + d);
     }
 }
